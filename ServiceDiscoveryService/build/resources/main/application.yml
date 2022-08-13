@@ -1,0 +1,23 @@
+
+
+## application definition
+spring:
+  application:
+    name: service-discovery-service
+
+## server env definition
+server:
+   port: 8070
+
+
+## eureka definition
+eureka:
+  instance:
+    hostname: service-discovery-service
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://localhost:8070/eureka/
+  server:
+    waitTimeInMsWhenSyncEmpty: 5
