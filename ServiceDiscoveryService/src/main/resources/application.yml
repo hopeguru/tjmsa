@@ -21,3 +21,11 @@ eureka:
       defaultZone: http://localhost:8070/eureka/
   server:
     waitTimeInMsWhenSyncEmpty: 5
+
+
+## logging level
+logging:
+  level:
+    com.netflix: WARN
+    org.springframework.web: WARN
+    com.hopeguru: DEBUG
