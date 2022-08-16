@@ -1,0 +1,38 @@
+
+## spring configuration
+spring:
+  application:
+    name: member-benefit-service
+
+  cloud:
+    loadbalancer:
+      ribbon:
+        enabled: false
+
+    zipkin:
+      baseUrl: http://localhost:9411
+
+      sleuth:
+        sampler:
+          percentage: 1
+
+## server configuration
+server:
+  port : 8090
+
+## eureka configuration
+eureka:
+  instance:
+    preferIpAddress: true
+  client:
+    registerWithEureka: true
+    fetchRegistry : true
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+## logging configuration
+logging:
+  level:
+      com.netflix: WARN
+      org.springframework.web: INFO
+      com.hopeguru: DEBUG
